@@ -94,10 +94,10 @@ window.onload = function () {
 			loader.load(function (loader, resources) {
 				var builder = new LIVE2DCUBISMPIXI.ModelBuilder();
 				builder.buildFromModel3Json(loader, resources['model3'], complate);
-				function complate(model){ setMotion(model, resources, 0.5, 0.5, resolve, reject); }
+				function complate(model){ setMotion(model, resources, 0.3, 0.5, resolve, reject); }
 			});
 		});
-/*		var p2 = new Promise(function (resolve, reject) {
+		var p2 = new Promise(function (resolve, reject) {
 			var loader = new PIXI.loaders.Loader();
 			loader.add('model3', "assets/Haruto/Haruto.model3.json", xhrType);
 			loader.add('motion1', "assets/Haruto/Haruto_01.motion3.json", xhrType);
@@ -112,10 +112,28 @@ window.onload = function () {
 			loader.load(function (loader, resources) {
 				var builder = new LIVE2DCUBISMPIXI.ModelBuilder();
 				builder.buildFromModel3Json(loader, resources['model3'], complate);
-				function complate(model){ setMotion(model, resources, 0.8, 0.5, resolve, reject); }
+				function complate(model){ setMotion(model, resources, 0.7, 0.5, resolve, reject); }
 			});
-		}); */
-		return Promise.all([p1, p2]);
+		}); 
+		var p3 = new Promise(function (resolve, reject) {
+			var loader = new PIXI.loaders.Loader();
+			loader.add('model3', "assets/Haruto/Haruto.model3.json", xhrType);
+			loader.add('motion1', "assets/Haruto/Haruto_01.motion3.json", xhrType);
+			loader.add('motion2', "assets/Haruto/Haruto_02.motion3.json", xhrType);
+			loader.add('motion3', "assets/Haruto/Haruto_03.motion3.json", xhrType);
+			loader.add('motion4', "assets/Haruto/Haruto_04.motion3.json", xhrType);
+			loader.add('motion5', "assets/Haruto/Haruto_05.motion3.json", xhrType);
+			loader.add('motion6', "assets/Haruto/Haruto_06.motion3.json", xhrType);
+			loader.add('motion7', "assets/Haruto/Haruto_07.motion3.json", xhrType);
+			loader.add('motion8', "assets/Haruto/Haruto_08.motion3.json", xhrType);
+			loader.add('motion9', "assets/Haruto/Haruto_09.motion3.json", xhrType);
+			loader.load(function (loader, resources) {
+				var builder = new LIVE2DCUBISMPIXI.ModelBuilder();
+				builder.buildFromModel3Json(loader, resources['model3'], complate);
+				function complate(model){ setMotion(model, resources, 1.1, 0.5, resolve, reject); }
+			});
+		}); 
+		return Promise.all([p1, p2, p3]);
 	}
 	function addModel() {
 		//モデルの登録
