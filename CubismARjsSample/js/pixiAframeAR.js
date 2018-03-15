@@ -97,7 +97,7 @@ window.onload = function () {
 				function complate(model){ setMotion(model, resources, 0.3, 0.5, resolve, reject); }
 			});
 		});
-		var p2 = new Promise(function (resolve, reject) {
+/*		var p2 = new Promise(function (resolve, reject) {
 			var loader = new PIXI.loaders.Loader();
 			loader.add('model3', "assets/Haruto/Haruto.model3.json", xhrType);
 			loader.add('motion1', "assets/Haruto/Haruto_01.motion3.json", xhrType);
@@ -132,8 +132,8 @@ window.onload = function () {
 				builder.buildFromModel3Json(loader, resources['model3'], complate);
 				function complate(model){ setMotion(model, resources, 1.1, 0.5, resolve, reject); }
 			});
-		}); 
-		return Promise.all([p1, p2, p3]);
+		}); */
+		return Promise.all([p1/*, p2, p3*/]);
 	}
 	function addModel() {
 		//モデルの登録
