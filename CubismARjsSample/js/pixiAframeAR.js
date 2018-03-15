@@ -115,7 +115,7 @@ window.onload = function () {
 				function complate(model){ setMotion(model, resources, 0.7, 0.5, resolve, reject); }
 			});
 		});
-		return Promise.all([p1]);
+		return Promise.all([p2]);
 	}
 	function addModel() {
 		//モデルの登録
