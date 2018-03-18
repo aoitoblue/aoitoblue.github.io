@@ -24,13 +24,13 @@ window.onload = function () {
 			var animation = LIVE2DCUBISMFRAMEWORK.Animation;
 			var override = LIVE2DCUBISMFRAMEWORK.BuiltinAnimationBlenders.OVERRIDE;
 			motions.push(animation.fromMotion3Json(resources['motion2'].data));
-			motions.push(animation.fromMotion3Json(resources['motion3'].data));
+		/*	motions.push(animation.fromMotion3Json(resources['motion3'].data));
 			motions.push(animation.fromMotion3Json(resources['motion4'].data));
 			motions.push(animation.fromMotion3Json(resources['motion5'].data));
 			motions.push(animation.fromMotion3Json(resources['motion6'].data));
 			motions.push(animation.fromMotion3Json(resources['motion7'].data));
 			motions.push(animation.fromMotion3Json(resources['motion8'].data));
-			motions.push(animation.fromMotion3Json(resources['motion9'].data));
+			motions.push(animation.fromMotion3Json(resources['motion9'].data));	*/
 			model.motions = motions;
 			model.animator.addLayer("motion", override, 1);
 			//ランダムでモーション再生
@@ -84,13 +84,13 @@ window.onload = function () {
 			loader.add('model3', "assets/Lili/180317lili.model3.json", xhrType);
 			loader.add('motion1', "assets/Lili/lilitouch.motion3.json", xhrType);
 			loader.add('motion2', "assets/Lili/liliidoling.motion3.json", xhrType);
-			loader.add('motion3', "assets/Koharu/Koharu_03.motion3.json", xhrType);
+		/*	loader.add('motion3', "assets/Koharu/Koharu_03.motion3.json", xhrType);
 			loader.add('motion4', "assets/Koharu/Koharu_04.motion3.json", xhrType);
 			loader.add('motion5', "assets/Koharu/Koharu_05.motion3.json", xhrType);
 			loader.add('motion6', "assets/Koharu/Koharu_06.motion3.json", xhrType);
 			loader.add('motion7', "assets/Koharu/Koharu_07.motion3.json", xhrType);
 			loader.add('motion8', "assets/Koharu/Koharu_08.motion3.json", xhrType);
-			loader.add('motion9', "assets/Koharu/Koharu_09.motion3.json", xhrType); 
+			loader.add('motion9', "assets/Koharu/Koharu_09.motion3.json", xhrType);	*/
 			loader.load(function (loader, resources) {
 				var builder = new LIVE2DCUBISMPIXI.ModelBuilder();
 				builder.buildFromModel3Json(loader, resources['model3'], complate);
