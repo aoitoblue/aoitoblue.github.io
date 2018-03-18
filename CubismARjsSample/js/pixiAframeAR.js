@@ -166,7 +166,7 @@ window.onload = function () {
 		marker.appendChild(plane);
 
 		plane.object3D.front = new THREE.Object3D();
-		plane.object3D.front.position.set(0, 0, 1);
+		plane.object3D.front.position.set(0, 0, 10);
 		plane.object3D.add(plane.object3D.front);
 
 		var texture = new THREE.Texture(app.view);
