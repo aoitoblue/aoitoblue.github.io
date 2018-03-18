@@ -94,7 +94,7 @@ window.onload = function () {
 			loader.load(function (loader, resources) {
 				var builder = new LIVE2DCUBISMPIXI.ModelBuilder();
 				builder.buildFromModel3Json(loader, resources['model3'], complate);
-				function complate(model){ setMotion(model, resources, 0.5, 0.2, resolve, reject); }
+				function complate(model){ setMotion(model, resources, 0.5, 0.5, resolve, reject); }
 			});
 		});
 /*		var p2 = new Promise(function (resolve, reject) {
@@ -160,7 +160,7 @@ window.onload = function () {
 		plane.setAttribute('height', '5');
 		plane.setAttribute('width', '5');
 		//マーカーを基準にしたモデルの相対位置
-		plane.setAttribute('position', '0 0 0');
+		plane.setAttribute('position', '0 0 -10');
 		var stand = stand_mode ? '0 0 0' : '-90 0 0';
 		plane.setAttribute('rotation', stand);
 		marker.appendChild(plane);
