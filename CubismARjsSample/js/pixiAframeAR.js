@@ -94,7 +94,7 @@ window.onload = function () {
 			loader.load(function (loader, resources) {
 				var builder = new LIVE2DCUBISMPIXI.ModelBuilder();
 				builder.buildFromModel3Json(loader, resources['model3'], complate);
-				function complate(model){ setMotion(model, resources, 0.5, 0.5, resolve, reject); }
+				function complate(model){ setMotion(model, resources, 0.5, 0, resolve, reject); }
 			});
 		});
 /*		var p2 = new Promise(function (resolve, reject) {
@@ -166,7 +166,7 @@ window.onload = function () {
 		marker.appendChild(plane);
 
 		plane.object3D.front = new THREE.Object3D();
-		plane.object3D.front.position.set(0, 0, 10);
+		plane.object3D.front.position.set(0, 0, -1);
 		plane.object3D.add(plane.object3D.front);
 
 		var texture = new THREE.Texture(app.view);
