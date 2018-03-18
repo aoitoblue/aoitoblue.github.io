@@ -94,7 +94,7 @@ window.onload = function () {
 			loader.load(function (loader, resources) {
 				var builder = new LIVE2DCUBISMPIXI.ModelBuilder();
 				builder.buildFromModel3Json(loader, resources['model3'], complate);
-				function complate(model){ setMotion(model, resources, 0.5, 0, resolve, reject); }
+				function complate(model){ setMotion(model, resources, 0.5, 0.3, resolve, reject); }
 			});
 		});
 /*		var p2 = new Promise(function (resolve, reject) {
